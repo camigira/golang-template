@@ -1,0 +1,111 @@
+{
+	"name": "Go",
+	"image": "mcr.microsoft.com/devcontainers/go:1-1.24-bookworm",
+
+	// Features to add to the dev container.
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"workbench.iconTheme": "material-icon-theme",
+				"workbench.colorTheme": "GitHub Dark Dimmed",
+				"files.autoSave": "afterDelay",
+				"editor.inlineSuggest.enabled": true,
+				"editor.fontSize": 17,
+				"editor.tabSize": 2,
+				"editor.formatOnSave": true,
+				"editor.fontFamily": "MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
+				"editor.renderWhitespace": "all",
+				"editor.detectIndentation": false,
+				"terminal.integrated.fontSize": 14,
+				"terminal.integrated.fontFamily": "MesloLGS NF",
+				"[json]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[jsonc]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[python]": {
+					"editor.formatOnType": true
+				},
+				"[handlebars]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[javascript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[yaml]": {
+					"editor.defaultFormatter": "redhat.vscode-yaml",
+					"editor.insertSpaces": true,
+					"editor.tabSize": 2,
+					"editor.autoIndent": "advanced"
+				},
+				"redhat.telemetry.enabled": false,
+				"cSpell.userWords": [
+					"langchaingo",
+					"llms",
+					"ollama"
+				],
+				"github.copilot.enable": {
+					"*": true,
+					"plaintext": false,
+					"markdown": true,
+					"scminput": false
+				},
+				"go.toolsManagement.autoUpdate": true,
+				"[go]": {
+					"editor.formatOnSave": true,
+					"editor.defaultFormatter": "golang.go",
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": "explicit",
+						"source.fixAll": "explicit"
+					}
+				},
+				"go.useLanguageServer": true,
+				"gopls": {
+					"ui.semanticTokens": true,
+					"ui.completion.usePlaceholders": true
+				},
+				"go.formatTool": "goimports",
+				"go.formatFlags": [
+					"-local",
+					"github.com/takt-corp/"
+				],
+				"go.lintTool": "golangci-lint",
+				"go.lintOnSave": "workspace",
+				"go.lintFlags": [
+					"--fast"
+				],
+				"go.addTags": {
+					"tags": "json,validate",
+					"options": "json=omitempty,validate=omitempty",
+					"promptForTags": false,
+					"transform": "snakecase"
+				},
+				"go.coverOnSave": false
+			},
+			"extensions": [
+				"golang.go",
+				"github.copilot",
+				"github.copilot-chat",
+				"github.github-vscode-theme",
+				"esbenp.prettier-vscode",
+				"redhat.vscode-yaml",
+				"eamodio.gitlens",
+				"donjayamanne.githistory",
+				"pkief.material-icon-theme",
+				"streetsidesoftware.code-spell-checker",
+				"gruntfuggly.todo-tree",
+				"oderwat.indent-rainbow",
+				"ms-azuretools.vscode-docker",
+				"hashicorp.terraform",
+				"ms-python.python",
+				"ms-python.vscode-pylance"
+			]
+		}
+	}
+}
