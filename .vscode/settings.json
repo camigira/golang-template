@@ -48,10 +48,6 @@
 
   "yaml.customTags": [],
 
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-show-information-expiration": "2024-07-10T08:49:57.114Z"
-  },
-
   // go specific settings
   "go.toolsManagement.autoUpdate": true,
   "[go]": {
