@@ -1,0 +1,90 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "files.autoSave": "afterDelay",
+  "editor.inlineSuggest.enabled": true,
+  "editor.fontSize": 17,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
+  "editor.renderWhitespace": "all",
+  "editor.detectIndentation": false,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced"
+  },
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "redhat.telemetry.enabled": false,
+  "cSpell.userWords": ["langchaingo", "llms", "ollama"],
+  "chat.editor.fontSize": 16,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "git.enableSmartCommit": true,
+
+  "yaml.customTags": [],
+
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-show-information-expiration": "2024-07-10T08:49:57.114Z"
+  },
+
+  // go specific settings
+  "go.toolsManagement.autoUpdate": true,
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    }
+  },
+  // make sure the go language server is enabled
+  "go.useLanguageServer": true,
+  // configure gopls, the go language server
+  "gopls": {
+    "ui.semanticTokens": true,
+    "ui.completion.usePlaceholders": true
+  },
+  // configure the go formatting tool to be goimports
+  "go.formatTool": "goimports",
+  "go.formatFlags": ["-local", "github.com/takt-corp/"],
+
+  // change the linting tool to be golangci
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "workspace",
+  "go.lintFlags": ["--fast"],
+  // configure the tags we want to add by default
+  "go.addTags": {
+    "tags": "json,validate",
+    "options": "json=omitempty,validate=omitempty",
+    "promptForTags": false,
+    "transform": "snakecase",
+    "template": ""
+  },
+  // dont run code coverage on save
+  "go.coverOnSave": false
+}
